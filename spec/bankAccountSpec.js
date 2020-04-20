@@ -15,4 +15,11 @@ describe("bankAccount", () => {
 
 
   })
+  it("can withdraw and add to balance", () => {
+    bankAccount.deposit(20);
+    bankAccount.withdraw(5);
+    expect(bankAccount.getBalance()).toEqual(15)
+
+
+  })
 })
