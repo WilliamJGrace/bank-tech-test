@@ -29,6 +29,8 @@ BankAccount.prototype.deposit = function (amount) {
 
 BankAccount.prototype.withdraw = function (amount) {
   this.balance -= amount
+  this.accountRecords.push({"date": this.recordCurrentDate()})
+
 };
 
 BankAccount.prototype.printStatment = function () {
