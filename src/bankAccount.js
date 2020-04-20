@@ -32,5 +32,5 @@ BankAccount.prototype.withdraw = function (amount) {
 };
 
 BankAccount.prototype.printStatment = function () {
-  console.log(`Balance: ${this.getBalance()}`)
+  console.log(`Balance: ${Number(this.getBalance()).toFixed(2)}`)
 };

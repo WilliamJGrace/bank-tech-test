@@ -39,7 +39,7 @@ describe("bankAccount", () => {
   })
 
   it("can print a basic balance on the console", () => {
-    expect(bankAccountWithBalance.printStatment()).toEqual(console.log("Balance: 50"))
+    expect(bankAccountWithBalance.printStatment()).toEqual(console.log("Balance: 50.00"))
   })
 
 })
