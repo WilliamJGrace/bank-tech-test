@@ -3,6 +3,8 @@ describe("bankAccount", () => {
 
   beforeEach(() => {
     bankAccount = new BankAccount();
+    bankAccountWithBalance = new BankAccount();
+    bankAccountWithBalance.deposit(50)
   });
 
   it("initialises with balance of 0", () => {
@@ -16,10 +18,14 @@ describe("bankAccount", () => {
 
   })
   it("can withdraw and add to balance", () => {
-    bankAccount.deposit(20);
-    bankAccount.withdraw(5);
-    expect(bankAccount.getBalance()).toEqual(15)
+    bankAccountWithBalance.withdraw(5);
+    expect(bankAccountWithBalance.getBalance()).toEqual(45)
 
 
   })
+
+  it("can print a basic balance on the console", () => {
+    expect(bankAccountWithBalance.printStatment()).toEqual(console.log("Balance: 50"))
+  })
+
 })

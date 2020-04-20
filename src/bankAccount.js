@@ -14,3 +14,7 @@ BankAccount.prototype.deposit = function (amount) {
 BankAccount.prototype.withdraw = function (amount) {
   this.balance -= amount
 };
+
+BankAccount.prototype.printStatment = function () {
+  console.log(`Balance: ${this.getBalance()}`)
+};
