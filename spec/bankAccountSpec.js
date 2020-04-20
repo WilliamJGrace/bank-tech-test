@@ -21,8 +21,12 @@ describe("bankAccount", () => {
 
     it("records date that money was depsoited and stores it", () => {
       bankAccount.deposit(20);
-      console.log(bankAccount.getAccountRecords())
       expect(bankAccount.getAccountRecords()[0].date).toEqual("20/04/2020")
+    })
+
+    it("records the amount deposit and marks it as a debit", () => {
+      bankAccount.deposit(20);
+      expect(bankAccount.getAccountRecords()[0].debit).toEqual("20.00")
     })
 
   })

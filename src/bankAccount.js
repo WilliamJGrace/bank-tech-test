@@ -23,7 +23,7 @@ BankAccount.prototype.recordCurrentDate = function () {
 
 BankAccount.prototype.deposit = function (amount) {
   this.balance += amount
-  this.accountRecords.push({"balance": this.balance, "date": this.recordCurrentDate()})
+  this.accountRecords.push({"balance": this.balance, "date": this.recordCurrentDate(), "debit": `${Number(amount).toFixed(2)}`})
 
 };
 
