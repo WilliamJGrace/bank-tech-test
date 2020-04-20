@@ -11,12 +11,22 @@ describe("bankAccount", () => {
     expect(bankAccount.getBalance()).toEqual(0)
   })
 
-  it("can deposit and add to balance", () => {
-    bankAccount.deposit(20);
-    expect(bankAccount.getBalance()).toEqual(20)
+  describe("#deposit", () => {
+    it("can deposit and add to balance", () => {
+      bankAccount.deposit(20);
+      expect(bankAccount.getBalance()).toEqual(20)
 
+
+    })
+
+    it("records date that money was depsoited and stores it", () => {
+      bankAccount.deposit(20);
+      console.log(bankAccount.getAccountRecords())
+      expect(bankAccount.getAccountRecords()[0].date).toEqual("20/04/2020")
+    })
 
   })
+
   it("can withdraw and add to balance", () => {
     bankAccountWithBalance.withdraw(5);
     expect(bankAccountWithBalance.getBalance()).toEqual(45)
