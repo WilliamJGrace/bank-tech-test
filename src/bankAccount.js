@@ -1,7 +1,12 @@
-function bankAccount() {
+function BankAccount() {
   this.balance = 0
 }
 
-bankAccount.prototype.getBalance = function () {
+BankAccount.prototype.getBalance = function () {
   return this.balance
+};
+
+BankAccount.prototype.deposit = function (amount) {
+  this.balance += amount
+
 };
