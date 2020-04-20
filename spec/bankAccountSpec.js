@@ -5,7 +5,7 @@ describe("bankAccount", () => {
   beforeEach(() => {
     bankAccount = new BankAccount();
     bankAccountWithBalance = new BankAccount();
-    bankAccountWithBalance.deposit(50)
+    bankAccountWithBalance.balance = 50
   });
 
   it("initialises with balance of 0", () => {
@@ -38,6 +38,10 @@ describe("bankAccount", () => {
     it("records date that money was withdrawn and stores it", () => {
       bankAccountWithBalance.withdraw(5);
       expect(bankAccountWithBalance.getAccountRecords()[0].date).toEqual("20/04/2020")
+    })
+    it("records the balance after money was withdrawn and stores it", () => {
+      bankAccountWithBalance.withdraw(5);
+      expect(bankAccountWithBalance.getAccountRecords()[0].balance).toEqual("45.00")
     })
 
   })
