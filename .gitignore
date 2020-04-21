@@ -1,8 +1,8 @@
-spec/PlayerSpec.js
-spec/SpecHelper.js
 
-src/Player.js
-src/Song.js
+
+
 jasmine-standalone-3.5.0.zip
 
 /node_modules/
+
+/coverage/
