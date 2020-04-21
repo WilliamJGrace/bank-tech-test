@@ -23,9 +23,10 @@ BankAccount.prototype.recordCurrentDate = function () {
 }
 
 BankAccount.prototype.deposit = function (amount) {
-  if (!Number.isInteger(amount)) {
+  if (!Number.isInteger(amount) || amount > 10000) {
     throw new Error('Please enter a number between 0 and 10000')
   }
+
   this.balance += amount
   this.accountRecords.push({ balance: `${Number(this.getBalance()).toFixed(2)}`, date: this.recordCurrentDate(), credit: `${Number(amount).toFixed(2)}` })
 }

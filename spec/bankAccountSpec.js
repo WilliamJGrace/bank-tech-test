@@ -43,8 +43,12 @@ describe('bankAccount', () => {
       expect(bankAccount.getAccountRecords()[0].credit).toEqual('20.00')
     })
 
-    it('raises an error when a user tried to withdraw and enters text', () => {
+    it('raises an error when a user tried to deposit and enters text', () => {
       expect(() => { bankAccount.deposit('string') }).toThrowError('Please enter a number between 0 and 10000')
+    })
+
+    it('raises an error when a user tried to deposit over 10,000 and enters text', () => {
+      expect(() => { bankAccount.deposit(10500) }).toThrowError('Please enter a number between 0 and 10000')
     })
   })
 
