@@ -36,6 +36,9 @@ BankAccount.prototype.withdraw = function (amount) {
   if (!Number.isInteger(amount)) {
     throw new Error("Please enter a number between 0 and 10000")
   }
+  if (this.balance - amount < 0) {
+    throw new Error("Withdrawel denied, amount exceeds your current balance")
+  }
   this.balance -= amount
   this.accountRecords.push({"date": this.recordCurrentDate(), "balance": `${Number(this.getBalance()).toFixed(2)}`, "debit": `${Number(amount).toFixed(2)}`} )
 

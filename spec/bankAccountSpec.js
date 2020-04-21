@@ -40,6 +40,8 @@ describe("bankAccount", () => {
     })
 
 
+
+
   })
 
   describe("#withdraw", () => {
@@ -65,6 +67,11 @@ describe("bankAccount", () => {
 
     it("raises an error when a user tried to withdraw and enters text", () => {
       expect(() => { bankAccount.withdraw("string") }).toThrowError("Please enter a number between 0 and 10000")
+    })
+
+    it("raises an error when a user withdraws an amount to take them below 0", () => {
+
+      expect(() => { bankAccountWithBalance.withdraw(200) }).toThrowError("Withdrawel denied, amount exceeds your current balance")
     })
 
   })
