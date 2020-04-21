@@ -1,3 +1,5 @@
+"use strict";
+
 function BankAccount() {
   this.balance = 0
   this.accountRecords = []
@@ -22,12 +24,18 @@ BankAccount.prototype.recordCurrentDate = function () {
 };
 
 BankAccount.prototype.deposit = function (amount) {
+  if (!Number.isInteger(amount)) {
+    throw new Error("Please enter a number between 0 and 10000")
+  }
   this.balance += amount
   this.accountRecords.push({"balance": `${Number(this.getBalance()).toFixed(2)}`, "date": this.recordCurrentDate(), "credit": `${Number(amount).toFixed(2)}`})
 
 };
 
 BankAccount.prototype.withdraw = function (amount) {
+  if (!Number.isInteger(amount)) {
+    throw new Error("Please enter a number between 0 and 10000")
+  }
   this.balance -= amount
   this.accountRecords.push({"date": this.recordCurrentDate(), "balance": `${Number(this.getBalance()).toFixed(2)}`, "debit": `${Number(amount).toFixed(2)}`} )
 
@@ -36,7 +44,7 @@ BankAccount.prototype.withdraw = function (amount) {
 BankAccount.prototype.printStatment = function () {
   // console.log(`Balance: ${Number(this.getBalance()).toFixed(2)}`)
   console.log("  date   || credit || debit || balance \n")
-  for (i=0;i<this.getAccountRecords().length;i++){
+  for (var i=0;i<this.getAccountRecords().length;i++){
     if (this.getAccountRecords()[i].debit ){
       console.log( `${this.getAccountRecords()[i].date} ||  || ${this.getAccountRecords()[i].debit} || ${this.getAccountRecords()[i].balance}`)
     }

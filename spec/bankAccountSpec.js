@@ -35,6 +35,11 @@ describe("bankAccount", () => {
       expect(bankAccount.getAccountRecords()[0].credit).toEqual("20.00")
     })
 
+    it("raises an error when a user tried to withdraw and enters text", () => {
+      expect(() => { bankAccount.deposit("string") }).toThrowError("Please enter a number between 0 and 10000")
+    })
+
+
   })
 
   describe("#withdraw", () => {
@@ -56,6 +61,10 @@ describe("bankAccount", () => {
     it("records the amount withdrawn and marks it as a debit", () => {
       expect(bankAccountWithBalance.getAccountRecords()[0].debit).toEqual("5.00")
 
+    })
+
+    it("raises an error when a user tried to withdraw and enters text", () => {
+      expect(() => { bankAccount.withdraw("string") }).toThrowError("Please enter a number between 0 and 10000")
     })
 
   })
