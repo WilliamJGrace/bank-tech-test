@@ -6,6 +6,10 @@ describe("User can print a basic balance", () => {
 
   beforeEach(() => {
 
+    BankAccount.prototype.recordCurrentDate = function () {
+     return "21/04/2020"
+    };
+
     bankAccount = new BankAccount();
 
     bankAccountWithBalance = new BankAccount();
