@@ -13,17 +13,22 @@ describe("bankAccount", () => {
   })
 
   describe("#deposit", () => {
-    it("can deposit and add to balance", () => {
+
+    beforeEach(() => {
       bankAccount.deposit(20);
+    })
+
+    it("can deposit and add to balance", () => {
       expect(bankAccount.getBalance()).toEqual(20)
     })
 
     it("records date that money was depsoited and stores it", () => {
-      bankAccount.deposit(20);
       expect(bankAccount.getAccountRecords()[0].date).toEqual("21/04/2020")
     })
 
-    
+    it("records the balance after money was deposited and stores it", () => {
+      expect(bankAccount.getAccountRecords()[0].balance).toEqual("20.00")
+    })
 
     it("records the amount deposit and marks it as a credit", () => {
       bankAccount.deposit(20);
