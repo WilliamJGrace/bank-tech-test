@@ -45,14 +45,16 @@ BankAccount.prototype.withdraw = function (amount) {
 };
 
 BankAccount.prototype.printStatment = function () {
-  // console.log(`Balance: ${Number(this.getBalance()).toFixed(2)}`)
-  console.log("  date   || credit || debit || balance \n")
+  var statement =  "  date   || credit || debit || balance \n"
   for (var i=0;i<this.getAccountRecords().length;i++){
     if (this.getAccountRecords()[i].debit ){
-      console.log( `${this.getAccountRecords()[i].date} ||  || ${this.getAccountRecords()[i].debit} || ${this.getAccountRecords()[i].balance}`)
+      statement = statement.concat(`${this.getAccountRecords()[i].date} ||  || ${this.getAccountRecords()[i].debit} || ${this.getAccountRecords()[i].balance} \n`)
+
     }
     else{
-      console.log( `${this.getAccountRecords()[i].date} || ${this.getAccountRecords()[i].credit}  ||  || ${this.getAccountRecords()[i].balance}`)
+      statement = statement.concat(`${this.getAccountRecords()[i].date} || ${this.getAccountRecords()[i].credit} ||  || ${this.getAccountRecords()[i].balance} \n`)
+
     }
   }
+  return statement
 };
