@@ -1,7 +1,28 @@
 # Bank Tech Test
 First Practice Tech Test
 
-Will be using JS with Jasmine
+Using JS with Jasmine
+
+## To run
+```
+git clone git@github.com:WilliamJGrace/bank-tech-test.git
+cd bank-tech-test
+open index.html
+then open the console and create a bank account using:
+
+bankAccount = new BankAccount()
+```
+
+## To Test
+```
+git clone git@github.com:WilliamJGrace/bank-tech-test.git
+cd bank-tech-test
+open SpecRunner.html
+
+```
+
+
+
 
 ## Specification
 
