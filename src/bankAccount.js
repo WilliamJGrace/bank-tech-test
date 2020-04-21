@@ -34,5 +34,9 @@ BankAccount.prototype.withdraw = function (amount) {
 };
 
 BankAccount.prototype.printStatment = function () {
-  console.log(`Balance: ${Number(this.getBalance()).toFixed(2)}`)
+  // console.log(`Balance: ${Number(this.getBalance()).toFixed(2)}`)
+  console.log("  date   || credit || debit || balance \n")
+  for (i=0;i<this.getAccountRecords.length;i++){
+    console.log( getAccountRecords[i].date || getAccountRecords[i].credit || getAccountRecords[i].debit || getAccountRecords[i].balance)
+  }
 };
