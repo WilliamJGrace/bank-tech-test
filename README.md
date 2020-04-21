@@ -1,7 +1,8 @@
 # Bank Tech Test
 First Practice Tech Test
 
-Using JS with Jasmine
+Using JS with the Jasmine framework for testing.
+Have used ESLint for linting and karma and istanbul for code coverage
 
 ## To run
 ```
@@ -17,7 +18,7 @@ bankAccount = new BankAccount()
 ```
 git clone git@github.com:WilliamJGrace/bank-tech-test.git
 cd bank-tech-test
-open SpecRunner.html
+npm test
 
 ```
 
