@@ -20,35 +20,42 @@ describe("bankAccount", () => {
 
     it("records date that money was depsoited and stores it", () => {
       bankAccount.deposit(20);
-      expect(bankAccount.getAccountRecords()[0].date).toEqual("20/04/2020")
+      expect(bankAccount.getAccountRecords()[0].date).toEqual("21/04/2020")
     })
 
-    it("records the amount deposit and marks it as a debit", () => {
+    
+
+    it("records the amount deposit and marks it as a credit", () => {
       bankAccount.deposit(20);
-      expect(bankAccount.getAccountRecords()[0].debit).toEqual("20.00")
+      expect(bankAccount.getAccountRecords()[0].credit).toEqual("20.00")
     })
 
   })
 
   describe("#withdraw", () => {
-    it("can withdraw and add to balance", () => {
+
+    beforeEach(() => {
       bankAccountWithBalance.withdraw(5);
+    })
+
+    it("can withdraw and add to balance", () => {
       expect(bankAccountWithBalance.getBalance()).toEqual(45)
     })
     it("records date that money was withdrawn and stores it", () => {
-      bankAccountWithBalance.withdraw(5);
-      expect(bankAccountWithBalance.getAccountRecords()[0].date).toEqual("20/04/2020")
+      expect(bankAccountWithBalance.getAccountRecords()[0].date).toEqual("21/04/2020")
     })
     it("records the balance after money was withdrawn and stores it", () => {
-      bankAccountWithBalance.withdraw(5);
       expect(bankAccountWithBalance.getAccountRecords()[0].balance).toEqual("45.00")
     })
 
+    it("records the amount withdrawn and marks it as a debit", () => {
+      expect(bankAccountWithBalance.getAccountRecords()[0].debit).toEqual("5.00")
+
+    })
+
   })
 
 
-  it("can print a basic balance on the console", () => {
-    expect(bankAccountWithBalance.printStatment()).toEqual(console.log("Balance: 50.00"))
-  })
+
 
 })

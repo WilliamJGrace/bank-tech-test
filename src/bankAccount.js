@@ -23,13 +23,13 @@ BankAccount.prototype.recordCurrentDate = function () {
 
 BankAccount.prototype.deposit = function (amount) {
   this.balance += amount
-  this.accountRecords.push({"balance": this.balance, "date": this.recordCurrentDate(), "debit": `${Number(amount).toFixed(2)}`})
+  this.accountRecords.push({"balance": this.balance, "date": this.recordCurrentDate(), "credit": `${Number(amount).toFixed(2)}`})
 
 };
 
 BankAccount.prototype.withdraw = function (amount) {
   this.balance -= amount
-  this.accountRecords.push({"date": this.recordCurrentDate(), "balance": `${Number(this.getBalance()).toFixed(2)}`})
+  this.accountRecords.push({"date": this.recordCurrentDate(), "balance": `${Number(this.getBalance()).toFixed(2)}`, "debit": `${Number(amount).toFixed(2)}`} )
 
 };
 
