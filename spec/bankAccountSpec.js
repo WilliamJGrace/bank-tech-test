@@ -3,9 +3,18 @@ describe("bankAccount", () => {
   var bankAccountWithBalance
 
   beforeEach(() => {
+    BankAccount.prototype.recordCurrentDate = function () {
+     return "21/04/2020"
+    };
     bankAccount = new BankAccount();
     bankAccountWithBalance = new BankAccount();
     bankAccountWithBalance.balance = 50
+  //   bankAccount.recordCurrentDate() = () => {
+  //     return "21/04/2020"
+  //   }
+  //   bankAccountWithBalance.recordCurrentDate() = () => {
+  //     return "21/04/2020"
+  //   }
   });
 
   it("initialises with balance of 0", () => {

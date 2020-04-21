@@ -5,6 +5,7 @@ describe("User can print a basic balance", () => {
 
 
   beforeEach(() => {
+
     bankAccount = new BankAccount();
 
     bankAccountWithBalance = new BankAccount();
