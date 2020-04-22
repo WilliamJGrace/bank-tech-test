@@ -3,7 +3,7 @@ describe('bankAccount', () => {
   let account
   beforeEach(() => {
 
-    recordLog = jasmine.createSpyObj('recordLog', ['create_record'])
+    recordLog = jasmine.createSpyObj('recordLog', ['createRecord'])
     account = new BankAccount(recordLog)
 
 
@@ -25,7 +25,18 @@ describe('bankAccount', () => {
     it('can deposit and add to balance', () => {
       expect(account.getBalance()).toEqual(20)
     })
+
+    it("deposit .deposit", () => {
+      // recordLog.createRecord.and.callFake(function () {
+      //   return {}
+      // });
+      expect(recordLog.createRecord).toHaveBeenCalled()
+
+    // it('can create a record', () => {
+    //   expect(account.deposit(20)).toHaveBeenCalledWith(recordLog)
+    // })
   })
+})
 
   describe('#withdraw', () => {
       beforeEach(() => {
