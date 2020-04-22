@@ -22,11 +22,11 @@ describe("Bank", () => {
     })
     it("can create a account", () => {
 
-      expect(bank.create_account(account)).toEqual(account)
+      expect(bank.createAccount(account)).toEqual(account)
     })
 
     it("adds the instance to the array of account", () => {
-      bank.create_account(account)
+      bank.createAccount(account)
       expect(bank._accounts[0]).toEqual(account)
     })
   })
