@@ -27,6 +27,15 @@ describe('bankAccount', () => {
     })
   })
 
+  describe('#withdraw', () => {
+      beforeEach(() => {
+        account.balance = 50
+        account.withdraw(5)
+      })
 
+      it('can withdraw and add to balance', () => {
+        expect(account.getBalance()).toEqual(45)
+      })
+    })
 
 })
