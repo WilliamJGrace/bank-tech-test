@@ -12,5 +12,9 @@ describe('bankAccount', () => {
     expect(account.recordLog).toEqual(recordLog)
   })
 
+  it('initialises with balance of 0', () => {
+   expect(account.getBalance()).toEqual(0)
+ })
+
 
 })
