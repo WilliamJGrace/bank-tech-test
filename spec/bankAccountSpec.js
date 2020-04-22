@@ -26,15 +26,11 @@ describe('bankAccount', () => {
       expect(account.getBalance()).toEqual(20)
     })
 
-    it("deposit .deposit", () => {
-      // recordLog.createRecord.and.callFake(function () {
-      //   return {}
-      // });
+    it("depositing creates a new record", () => {
+
       expect(recordLog.createRecord).toHaveBeenCalled()
 
-    // it('can create a record', () => {
-    //   expect(account.deposit(20)).toHaveBeenCalledWith(recordLog)
-    // })
+
   })
 })
 

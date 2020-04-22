@@ -13,7 +13,7 @@ BankAccount.prototype.getBalance = function () {
 
 BankAccount.prototype.deposit = function (amount) {
   this.balance += amount
-  this.recordLog.createRecord()
+  this.recordLog.createRecord(this.balance)
 
 };
 
