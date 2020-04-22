@@ -43,6 +43,12 @@ describe('bankAccount', () => {
       it('can withdraw and add to balance', () => {
         expect(account.getBalance()).toEqual(45)
       })
+      it("withdrawing creates a new record", () => {
+
+        expect(recordLog.createRecord).toHaveBeenCalled()
+
+
+    })
     })
 
 })

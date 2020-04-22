@@ -13,11 +13,12 @@ BankAccount.prototype.getBalance = function () {
 
 BankAccount.prototype.deposit = function (amount) {
   this.balance += amount
-  return this.recordLog.createRecord(this.balance, amount, null )
+  return this.recordLog.createRecord(this.balance, null, amount )
 
 };
 
 BankAccount.prototype.withdraw = function (amount) {
   this.balance -= amount
+  return this.recordLog.createRecord(this.balance, amount, null )
 
 };
