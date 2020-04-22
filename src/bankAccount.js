@@ -13,8 +13,14 @@ BankAccount.prototype.getAccountRecords = function () {
   return this.accountRecords
 }
 
+BankAccount.prototype.getTodaysDate = function () {
+  return new Date()
+};
+
 BankAccount.prototype.recordCurrentDate = function () {
-  var today = new Date()
+  var today = this.getTodaysDate()
+  console.log(today)
+  
   var dd = String(today.getDate()).padStart(2, '0')
   var mm = String(today.getMonth() + 1).padStart(2, '0') // January is 0!
   var yyyy = today.getFullYear()

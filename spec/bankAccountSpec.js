@@ -2,6 +2,38 @@ describe('bankAccount', () => {
   var bankAccount
   var bankAccountWithBalance
 
+  describe("getCurrentDate", () => {
+    beforeEach(() => {
+      bankAccount = new BankAccount()
+
+
+
+      function DateDouble() {
+
+      };
+
+      DateDouble.prototype.getDate = function() {
+        return 22
+      }
+      DateDouble.prototype.getMonth = function () {
+        return 3
+      }
+      DateDouble.prototype.getFullYear = function () {
+        return 2020
+      }
+      BankAccount.prototype.getTodaysDate = function () {
+        return new DateDouble()
+      }
+      bankAccount = new BankAccount()
+
+    })
+      it("returns a string of the current date", () => {
+        console.log(bankAccount.getTodaysDate().getDate())
+        console.log(bankAccount.recordCurrentDate())
+        expect(bankAccount.recordCurrentDate()).toEqual("22/04/2020")
+      })
+  })
+
   beforeEach(() => {
     BankAccount.prototype.recordCurrentDate = function () {
       return '21/04/2020'
