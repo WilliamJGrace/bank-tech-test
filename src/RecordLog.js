@@ -2,7 +2,7 @@ function RecordLog() {
 
 }
 
-RecordLog.prototype.create_record = function (record) {
+RecordLog.prototype.createRecord = function (record) {
   newRecord = record || new Record()
   return newRecord
 };

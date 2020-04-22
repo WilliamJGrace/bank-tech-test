@@ -1,8 +1,8 @@
 'use strict'
 
-function BankAccount (recordLog) {
+function BankAccount (recordLog = new RecordLog()) {
   this.balance = 0
-  this.recordLog = recordLog || new RecordLog()
+  this.recordLog = recordLog
 }
 
 BankAccount.prototype.getBalance = function () {
@@ -13,7 +13,7 @@ BankAccount.prototype.getBalance = function () {
 
 BankAccount.prototype.deposit = function (amount) {
   this.balance += amount
-  this.recordLog.createRecord(this.balance)
+  return this.recordLog.createRecord(this.balance, amount, null )
 
 };
 

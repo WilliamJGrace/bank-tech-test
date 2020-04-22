@@ -14,7 +14,7 @@ describe("RecordLog", () => {
 
 
 
-      expect(recordLog.create_record(record)).toEqual(record)
+      expect(recordLog.createRecord(record)).toEqual(record)
     })
 
   })
