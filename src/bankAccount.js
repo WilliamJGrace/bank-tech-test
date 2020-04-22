@@ -1,6 +1,6 @@
 'use strict'
 
-function BankAccount () {
+function BankAccount (recordLog) {
   this.balance = 0
-  this.recordLog = new RecordLog()
+  this.recordLog = recordLog || new RecordLog()
 }
