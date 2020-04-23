@@ -38,11 +38,12 @@ describe('bankAccount', () => {
       expect(recordLog.createRecord).toHaveBeenCalled()
 
     })
+    //edge cases
     it('raises an error when a user tried to deposit and enters text', () => {
      expect(() => { account.deposit('string') }).toThrowError('Please enter a number between 0 and 10000')
    })
 
-   it('raises an error when a user tried to deposit over 10,000 and enters text', () => {
+   it('raises an error when a user tried to deposit over 10,000', () => {
      expect(() => { account.deposit(10500) }).toThrowError('Please enter a number between 0 and 10000')
    })
 })
@@ -60,8 +61,19 @@ describe('bankAccount', () => {
 
         expect(recordLog.createRecord).toHaveBeenCalled()
 
-
     })
+    //edge cases
+
+    it('raises an error when a user tried to withdraw and enters text', () => {
+     expect(() => { account.withdraw('string') }).toThrowError('Please enter a number between 0 and 10000')
+    })
+    it('raises an error when a user tried to withdraw over 10,000', () => {
+      expect(() => { account.withdraw(10500) }).toThrowError('Please enter a number between 0 and 10000')
+    })
+
+   it('raises an error when a user withdraws an amount to take them below 0', () => {
+     expect(() => { account.withdraw(200) }).toThrowError('Withdrawel denied, amount exceeds your current balance')
+   })
     })
 
 })
