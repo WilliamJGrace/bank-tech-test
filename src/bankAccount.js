@@ -24,7 +24,6 @@ BankAccount.prototype.withdraw = function (amount) {
 };
 
 BankAccount.prototype.printRecords = function () {
-  console.log(this.recordLog)
-  this.recordLog.printRecords()
+  return this.recordLog.printRecords()
 
 };

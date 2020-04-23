@@ -2,14 +2,15 @@ function RecordLog() {
   this.records = []
 }
 
-RecordLog.prototype.createRecord = function (record) {
-  newRecord = record || new Record()
+RecordLog.prototype.createRecord = function (balance, debit, credit) {
+  newRecord = new Record(balance, debit, credit)
   this.records.push(newRecord)
   return newRecord
 };
 
 RecordLog.prototype.printRecords = function () {
   let printRecords = new PrintRecords(this.records)
-  printRecords.printStatement()
+
+  return printRecords.printStatement()
 
 };

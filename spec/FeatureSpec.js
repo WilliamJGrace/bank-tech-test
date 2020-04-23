@@ -27,6 +27,6 @@ describe('User can print a basic balance', () => {
     bankAccount.deposit(20)
     bankAccount.withdraw(10)
 
-    expect(bankAccount.printStatment()).toEqual('  date   || credit || debit || balance \n21/04/2020 || 60.00 ||  || 60.00 \n21/04/2020 || 20.00 ||  || 80.00 \n21/04/2020 ||  || 10.00 || 70.00 \n')
+    expect(bankAccount.printRecords()).toEqual('  date   || credit || debit || balance \n21/04/2020 || 60.00 ||  || 60.00 \n21/04/2020 || 20.00 ||  || 80.00 \n21/04/2020 ||  || 10.00 || 70.00 \n')
   })
 })
