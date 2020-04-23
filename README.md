@@ -8,6 +8,7 @@ Have used ESLint for linting and karma and istanbul for code coverage
 ```
 git clone git@github.com:WilliamJGrace/bank-tech-test.git
 cd bank-tech-test
+npm install
 open index.html
 then open the console and create a bank account using:
 bank = new Bank(0)

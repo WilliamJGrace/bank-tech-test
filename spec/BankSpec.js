@@ -5,7 +5,6 @@ describe('Bank', () => {
     bank = new Bank()
   })
 
-
   describe('create', () => {
     beforeEach(() => {
       account = jasmine.createSpyObj('account', ['deposit'])
