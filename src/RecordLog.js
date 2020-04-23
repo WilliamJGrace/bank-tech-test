@@ -8,8 +8,8 @@ RecordLog.prototype.createRecord = function (record) {
   return newRecord
 };
 
-RecordLog.prototype.PrintRecords = function () {
+RecordLog.prototype.printRecords = function () {
   let printRecords = new PrintRecords(this.records)
   printRecords.printStatement()
-  
+
 };

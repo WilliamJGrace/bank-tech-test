@@ -22,3 +22,9 @@ BankAccount.prototype.withdraw = function (amount) {
   return this.recordLog.createRecord(this.balance, amount, null )
 
 };
+
+BankAccount.prototype.printRecords = function () {
+  console.log(this.recordLog)
+  this.recordLog.printRecords()
+
+};
