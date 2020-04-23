@@ -37,8 +37,14 @@ describe('bankAccount', () => {
 
       expect(recordLog.createRecord).toHaveBeenCalled()
 
+    })
+    it('raises an error when a user tried to deposit and enters text', () => {
+     expect(() => { account.deposit('string') }).toThrowError('Please enter a number between 0 and 10000')
+   })
 
-  })
+   it('raises an error when a user tried to deposit over 10,000 and enters text', () => {
+     expect(() => { account.deposit(10500) }).toThrowError('Please enter a number between 0 and 10000')
+   })
 })
 
   describe('#withdraw', () => {
