@@ -9,16 +9,16 @@ describe("PrintRecords", () => {
     return 20 })
   record.recordCredit.and.callFake(function () {
     return 30 })
-    records = [record, record, record]
+  records = [record, record, record]
 
-    printRecords = new PrintRecords(records)
-
-
+  printRecords = new PrintRecords(records)
 
 
-  it("converts array of instances into an array of objects"), () => {
+
+
+  it("converts array of instances into an array of objects", () => {
     expect(printRecords.printStatement()).toEqual([{"balance": 10, "debit":20, "credit": 30}, {"balance": 10, "debit":20, "credit": 30}, {"balance": 10, "debit":20, "credit": 30}])
 
 
-  }
+  })
 })
