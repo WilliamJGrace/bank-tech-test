@@ -10,11 +10,22 @@ git clone git@github.com:WilliamJGrace/bank-tech-test.git
 cd bank-tech-test
 open index.html
 then open the console and create a bank account using:
+bank = new Bank(0)
+bankAccount = bank.createAccount()
+```
+You can then make deposits and withdrawals using:
+```
+bankAccount.deposit(50)
+bankAccount.deposit(90)
+bankAccount.withdrawal(20)
+```
+to see a print out of your statement please type in:
+```
+bankAccount.printRecords()
 
-bankAccount = new BankAccount()
 ```
 
-## To Test
+## To Test and see coverage
 ```
 git clone git@github.com:WilliamJGrace/bank-tech-test.git
 cd bank-tech-test
