@@ -3,7 +3,6 @@ function PrintRecords (records) {
 }
 
 PrintRecords.prototype.convertToObjects = function () {
-  console.log('THIS.RECORDS', this.records)
 
   var arr = []
   for (var i = 0; i < this.records.length; i++) {

@@ -10,7 +10,7 @@ BankAccount.prototype.getBalance = function () {
 }
 
 BankAccount.prototype.isValidTransaction = function (amount) {
-  if (!Number.isInteger(amount) || amount > 10000) {
+  if (!Number.isInteger(amount) || amount > 10000 || amount < 0) {
     throw new Error('Please enter a number between 0 and 10000')
   }
 }

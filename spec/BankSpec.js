@@ -4,15 +4,7 @@ describe('Bank', () => {
   beforeEach(() => {
     bank = new Bank()
   })
-  // function BankAccountDouble() {
-  //
-  // }
-  //
-  // BankAccountDouble.prototype.generate_account_instance = function () {
-  //
-  // };
 
-  // let bankAccountClass  = {double :BankAccount_class, new: bankacount}
 
   describe('create', () => {
     beforeEach(() => {
