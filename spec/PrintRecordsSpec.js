@@ -14,7 +14,7 @@ describe("PrintRecords", () => {
 
 
   it("converts array of instances into an array of objects", () => {
-    expect(printRecords.printStatement()).toEqual([{"balance": 10, "debit":20, "credit": 30}, {"balance": 10, "debit":20, "credit": 30}, {"balance": 10, "debit":20, "credit": 30}])
+    expect(printRecords.convertToObjects()).toEqual([{"balance": "10.00", "debit":"20.00", "credit": "30.00"}, {"balance": "10.00", "debit":"20.00", "credit": "30.00"}, {"balance": "10.00", "debit":"20.00", "credit": "30.00"}])
 
 
   })
