@@ -1,27 +1,26 @@
 describe('User can print a basic balance', () => {
   var bank
-  var bankAccountWithBalance
   var bankAccount
 
   beforeEach(() => {
     // BankAccount.prototype.recordCurrentDate = function () {
     //   return '21/04/2020'
     // }
-    bank = new Bank();
+    bank = new Bank()
     bankAccount = bank.createAccount()
   })
-//
-//     bankAccount = new BankAccount()
-//
-//     bankAccountWithBalance = new BankAccount()
-//     bankAccountWithBalance.balance = 50
-//   })
-//
-//   // it("can print a basic record on the console", () => {
-//   //   bankAccount.deposit(60)
-//   //   bankAccount.printStatment()
-//   // });
-//
+  //
+  //     bankAccount = new BankAccount()
+  //
+  //     bankAccountWithBalance = new BankAccount()
+  //     bankAccountWithBalance.balance = 50
+  //   })
+  //
+  //   // it("can print a basic record on the console", () => {
+  //   //   bankAccount.deposit(60)
+  //   //   bankAccount.printStatment()
+  //   // });
+  //
   it('can print a few records on the console', () => {
     bankAccount.deposit(60)
     bankAccount.deposit(20)
