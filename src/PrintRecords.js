@@ -3,11 +3,13 @@ function PrintRecords(records){
 }
 
 PrintRecords.prototype.convertToObjects = function () {
+  console.log('THIS.RECORDS', this.records)
+
   var arr = []
   for(var i=0;i<this.records.length;i++){
 
 
-    arr.push({"balance": `${Number(this.records[i].recordBalance).toFixed(2)}`, "debit": `${Number(this.records[i].recordDebit).toFixed(2)}`, "credit": `${Number(this.records[i].recordCredit).toFixed(2)}`})
+    arr.push({"date": this.records[i].recordDate, "balance": `${Number(this.records[i].recordBalance).toFixed(2)}`, "debit": `${Number(this.records[i].recordDebit).toFixed(2)}`, "credit": `${Number(this.records[i].recordCredit).toFixed(2)}`})
   }
   return arr
 };
