@@ -3,12 +3,9 @@ describe("PrintRecords", () => {
   let records
   let printRecords
   record = jasmine.createSpyObj('record', ['recordBalance', 'recordDebit', 'recordCredit'])
-  record.recordBalance.and.callFake(function () {
-    return 10 })
-  record.recordDebit.and.callFake(function () {
-    return 20 })
-  record.recordCredit.and.callFake(function () {
-    return 30 })
+  record.recordBalance = 10
+  record.recordDebit = 20
+  record.recordCredit = 30
   records = [record, record, record]
 
   printRecords = new PrintRecords(records)

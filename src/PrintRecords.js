@@ -8,7 +8,7 @@ PrintRecords.prototype.printStatement = function () {
     console.log(this.records)
     console.log(this.records[i])
 
-    arr.push({"balance": this.records[i].recordBalance(), "debit": this.records[i].recordDebit(), "credit": this.records[i].recordCredit()})
+    arr.push({"balance": this.records[i].recordBalance, "debit": this.records[i].recordDebit, "credit": this.records[i].recordCredit})
   }
   return arr
 };
