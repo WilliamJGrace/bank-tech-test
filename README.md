@@ -34,6 +34,14 @@ npm test
 
 ```
 
+## My approach
+I decided to approach this challenge in an Object Oriented manner. I Decided to use a separate class for each responsibility.
+
+## My Structure
+The files are separated by Spec and Src. The Spec files contain my tests, the src files contain my classes.
+
+![Running app](Screenshot 2020-04-23 at 20.10.54.png)
+
 
 
 
