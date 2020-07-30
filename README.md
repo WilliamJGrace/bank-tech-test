@@ -1,8 +1,6 @@
 # Bank Tech Test
-First Practice Tech Test
-
-Using JS with the Jasmine framework for testing.
-Have used ESLint for linting and karma and istanbul for code coverage
+This commnand-line application was built with JavaScript using the Jasmine framework for testing.
+I Have used ESLint for linting and karma and istanbul for code coverage.
 
 ## To run
 ```
@@ -35,7 +33,7 @@ npm test
 ```
 
 ## My approach
-I decided to approach this challenge in an Object Oriented manner. I Decided to use a separate class for each responsibility.
+I decided to approach this challenge in an Object Oriented manner. I seperated my classes based on the Single Responsiblity Principle.
 
 ## My Structure
 The files are separated by Spec and Src. The Spec files contain my tests, the src files contain my classes.
