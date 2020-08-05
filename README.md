@@ -1,6 +1,7 @@
 # Bank Tech Test
 This commnand-line application was built with JavaScript using the Jasmine framework for testing.
 I Have used ESLint for linting and karma and istanbul for code coverage.
+The whole application was developed using the TDD process.
 
 ## To run
 ```
